@@ -21,7 +21,12 @@
             Whether it's a useful article, <br> a fun video,or an important resource, 
             you can quickly store and categorize your links. Tag your bookmarks for easy searching, and<br>access them from any device,anytime.
             Keep your online world neat and organized—start saving with Bookmarkify today</p>
+            {% if user.is_authenticated %}
             <a href="{% url 'addlist' %}" class="btn btn-dark btn-sm mb-3 px-5">Add List</a><br><br>
+            {% else %}
+            <a href="{% url 'signup' %}" class="btn btn-outline-success btn-sm mx-3 px-5">Signup</a>
+            <a href="{% url 'login' %}" class="btn btn-success btn-sm px-5">Login</a>
+            {% endif %}
         </div>
       </div>
     </div>
