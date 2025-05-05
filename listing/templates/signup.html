@@ -1,0 +1,22 @@
+{% include 'partials/logoutnav.html' %}
+<body class="bg-light">
+<div class="container w-25 border border-primary-subtle bg-white my-5">
+<h1 style="text-align: center;" class="my-3">Signup</h1>
+<form method="POST">
+    {% csrf_token %}
+    <div class="mx-5 my-3">
+    <label for="username" class="form-label ">Username</label>
+    <div>{{form.username}}</div>
+    <p class="text-danger">{{form.username.errors}}</p>
+    <label for="password" class="form-label">password</label>
+    <div>{{form.password1}}</div>
+    <p class="text-danger">{{form.password1.errors}}</p>
+    <label for="password" class="form-label">Confirm password</label>
+    <div>{{form.password2}}</div>
+    <p class="text-danger">{{form.password2.errors}}</p>
+    
+    <input type ="submit" value="submit" class="btn btn-primary mt-2 mb-3 ">
+</div>
+</form>
+
+</body>

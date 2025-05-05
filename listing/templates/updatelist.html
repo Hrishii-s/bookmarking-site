@@ -1,0 +1,13 @@
+
+
+{% include "partials/nav.html" %}
+<h1 class="display-4 d-flex justify-content-center align-items-center mt-5"> Update </h1>
+<form method="POST" >
+    {% csrf_token %}
+    <div class="mt-4 d-flex justify-content-center align-items-center">
+        <div class="form-group ">
+            {{ form }} 
+            <button type="submit" class="btn btn-primary mx-3">Update</button>
+        </div>
+    </div>
+</form>

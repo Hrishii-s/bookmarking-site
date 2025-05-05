@@ -1,0 +1,17 @@
+{% include "partials/nav.html" %}
+<h1 class="display-4 d-flex justify-content-center align-items-center mt-5">Add your Bookmarks</h1>
+{%if error%}
+<h3 class="text-center">{{error}}</h3>
+
+{%else%}
+<form method="POST" >
+    {% csrf_token %}
+    <div class="mt-4 d-flex justify-content-center align-items-center">
+        <div class="form-group ">
+            {{ form}} 
+            <button type="submit" class="btn btn-primary mx-3">Add</button>
+            
+        </div>
+    </div>
+</form>
+{% endif %}
