@@ -6,4 +6,4 @@ from django.http import HttpResponse
 def home(request):
     return render(request,"homepage.html")
 def logouthome(request):
-    return render(request,"index.html")
+    return render(request,"homeloggedout.html")
